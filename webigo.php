@@ -23,6 +23,7 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       webigo
  * Domain Path:       /languages
+ * GitHub Plugin URI: lanzoninicola/webigo-bellas
  */
 
 // If this file is called directly, abort.
