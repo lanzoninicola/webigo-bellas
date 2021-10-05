@@ -103,6 +103,8 @@ class Webigo_Header_Menu_Categories {
             }
             
         }
+
+        var_dump( $this->categories);
         
     }
 
