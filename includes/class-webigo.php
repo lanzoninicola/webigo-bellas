@@ -112,7 +112,6 @@ class Webigo
 			$this->define_styles();
 			$this->define_scripts();
 			$this->define_data_for_scripts();
-			var_dump('Hello world');
 		}
 
 		
