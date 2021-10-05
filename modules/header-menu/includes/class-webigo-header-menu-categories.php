@@ -77,7 +77,6 @@ class Webigo_Header_Menu_Categories {
 
         $wc_categories = get_categories( $this->query_params );
 
-
         foreach ( $wc_categories as $wc_category ) {
 
             if ( ! isset( $this->categories[$wc_category->parent] ) ) {
@@ -86,26 +85,26 @@ class Webigo_Header_Menu_Categories {
 
             $wbg_category = new Webigo_Header_Menu_Category( $wc_category );
 
-            if ( Webigo_Header_Menu_Settings::HEADER_MENU_SHOW_EMPTIES === true && $wbg_category->is_empty() === true ) {
+            $category = array(
+                'id'          => $wbg_category->id(),
+                'name'        => $wbg_category->name(),
+                'description' => $wbg_category->description(),
+                'link'        => $wbg_category->link(),
+                'image_url'   => $wbg_category->image_url(),
+                'empty'       => $wbg_category->is_empty(),
+                'priority'    => $this->load_priority( $wbg_category )
+            );
 
-                $category = array(
-                    'id'          => $wbg_category->id(),
-                    'name'        => $wbg_category->name(),
-                    'description' => $wbg_category->description(),
-                    'link'        => $wbg_category->link(),
-                    'image_url'   => $wbg_category->image_url(),
-                    'priority'    => $this->load_priority( $wbg_category )
-                );
-    
-                $this->categories_hierarchy[$wbg_category->parent()][$wbg_category->id()] = $category;
-    
-                array_push( $this->categories, $category );
+            if ( Webigo_Header_Menu_Settings::HEADER_MENU_SHOW_EMPTIES === false && $wbg_category->is_empty() === true ) {
+                continue;
             }
+
+            $this->categories_hierarchy[$wbg_category->parent()][$wbg_category->id()] = $category;
+    
+            array_push( $this->categories, $category );
             
         }
 
-        var_dump( $this->categories);
-        
     }
 
     private function _sort_priority_callback( $a, $b ) {

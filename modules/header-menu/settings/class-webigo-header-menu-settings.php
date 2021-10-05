@@ -17,7 +17,7 @@ class Webigo_Header_Menu_Settings {
 
     const HEADER_MENU_SHOW_CATEGORY_IMAGE = false;
 
-    const HEADER_MENU_SHOW_EMPTIES = true;
+    const HEADER_MENU_SHOW_EMPTIES = false;
 
     const POD_CUSTOM_FIELDS_NAME = array(
         'category_priority' => 'em_destaque',

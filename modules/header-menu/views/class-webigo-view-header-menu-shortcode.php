@@ -61,6 +61,7 @@ class Webigo_View_Header_Menu_Shortcode
         <ul class="wbg-nav-items" data-visibility="<?php echo esc_attr($visibility); ?>" data-nav-level="<?php echo esc_attr($level) ?>" data-style="<?php echo $level === 2 ?  esc_attr($navstyle) : '' ?>">
 
             <?php foreach ($categories as $category) : ?>
+
                 <li class="wbg-nav-item" data-category-id="<?php echo $category['id'] ?>">
                     <?php
 

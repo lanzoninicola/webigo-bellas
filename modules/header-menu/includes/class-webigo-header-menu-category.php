@@ -68,6 +68,12 @@ class Webigo_Header_Menu_Category {
         return $query->get_products();
     }
 
+    public function count_products() {
+        $wc_products_category = $this->get_wc_products_category();
+
+        return count( $wc_products_category );
+    }
+
     public function is_empty() : bool
     {
         $wc_products_category = $this->get_wc_products_category();
