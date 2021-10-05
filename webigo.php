@@ -16,7 +16,7 @@
  * Plugin Name:       Webigo Bellas Boutique
  * Plugin URI:        https://webigo.com.br
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Lanzoni Nicola
  * Author URI:        https://webigo.com.br
  * License:           GPL-2.0+
